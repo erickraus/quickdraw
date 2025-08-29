@@ -1,0 +1,121 @@
+{
+    "description": "Hyper Key sublayer \"o\"",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_x",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Toggle Hyper sublayer o",
+            "from": {
+                "key_code": "o",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "hyper_sublayer_o",
+                        "value": 1
+                    }
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "hyper_sublayer_o",
+                        "value": 0
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_o",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Open -a '1Password.app'",
+            "from": {
+                "key_code": "1",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "shell_command": "open -a '1Password.app'" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_o",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Open -a 'Google Chrome.app'",
+            "from": {
+                "key_code": "g",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "shell_command": "open -a 'Google Chrome.app'" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_o",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Open -a 'Finder.app'",
+            "from": {
+                "key_code": "f",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "shell_command": "open -a 'Finder.app'" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_o",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Open -a 'Spotify.app'",
+            "from": {
+                "key_code": "p",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "shell_command": "open -a 'Spotify.app'" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_o",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Open raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink",
+            "from": {
+                "key_code": "l",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "shell_command": "open raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink" }],
+            "type": "basic"
+        }
+    ]
+}
